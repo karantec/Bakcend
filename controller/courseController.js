@@ -5,7 +5,7 @@ const userLogin = async (req, res) => {
     const { username, password, month } = req.body; // Include month in login payload
 
     // Validate credentials
-    if (username !== '2025_Batch_Training' || password !== '2025_Batch_Training') {
+    if (username !== 'Student@75' || password !== '75student@desiqna.in') {
         return res.status(401).json({ message: 'Invalid credentials' });
     }
 
