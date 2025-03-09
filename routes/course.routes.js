@@ -1,10 +1,10 @@
-const express = require('express');
-const { userLogin, createCourse, getCoursesByUserAndMonth } = require('../controller/courseController');
+const { createFormData, getAllFormData } = require('../controller/UserCotroller');
 
-const router = express.Router();
+const router = require('express').Router();
 
-router.post('/login', userLogin);
-router.post('/courses', createCourse);
-router.get('/courses', getCoursesByUserAndMonth);
+router.post('/create', createFormData)
+router.get('/get',getAllFormData )
+ 
+
 
 module.exports = router;

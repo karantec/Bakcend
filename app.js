@@ -17,7 +17,7 @@ app.get('/', async (req, res, next) => {
 });
 app.use(cors());
 // app.use('/api', require('./routes/api.route'));
-app.use('/course', courseRoutes);
+app.use('/User', courseRoutes);
 
 // Middleware for handling 404 errors
 app.use((req, res, next) => {
