@@ -2,9 +2,9 @@ const FormData = require("../models/User");
 
 const createFormData = async (req, res) => {
   try {
-    const { firstName, lastName, email, phone, businessName, businessType, streetAddress, city, state, pinCode, nominateForAwards, acceptMessages } = req.body;
+    const { firstName, lastName, email, phone, businessName, businessType, streetAddress, city, state, pinCode, area,landmark,nominateForAwards, acceptMessages } = req.body;
 
-    if (!firstName || !lastName || !email || !phone || !businessName || !businessType || !streetAddress || !city || !state || !pinCode) {
+    if (!firstName || !lastName || !email || !phone || !businessName || !businessType || !streetAddress || !city || !state || !pinCode || !area || !landmark ) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
@@ -19,6 +19,8 @@ const createFormData = async (req, res) => {
       city,
       state,
       pinCode,
+      area,
+      landmark,
       nominateForAwards,
       acceptMessages,
     });

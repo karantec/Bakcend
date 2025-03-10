@@ -11,6 +11,8 @@ const FormSchema = new mongoose.Schema({
     city: { type: String, required: true },
     state: { type: String, required: true },
     pinCode: { type: String, required: true },
+    area:{ type: String, required: true },
+    landmark:{ type: String, required: true },
     nominateForAwards: { type: Boolean, default: false },
     acceptMessages: { type: Boolean, default: false }
   }, { timestamps: true });
